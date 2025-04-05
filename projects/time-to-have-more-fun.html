@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time to Have More Fun | Your Name</title>
+    <meta name="description" content="A single page web app for helping people find the perfect gift." />
+    <meta name="author" content="Your Name" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <header class="navbar">
+        <nav class="nav-container">
+          <a href="../index.html" class="logo">YN.</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <ul class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+              <li><a href="../index.html#experience"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+              <li><a href="../index.html#work"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+              <li><a href="../index.html#contact"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <a href="#" class="btn btn-outline">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger-icon"></span>
+          </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="nav-links mobile">
+            <li><a href="../index.html#about" onclick="closeMobileMenu()"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+            <li><a href="../index.html#experience" onclick="closeMobileMenu()"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+            <li><a href="../index.html#work" onclick="closeMobileMenu()"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+            <li><a href="../index.html#contact" onclick="closeMobileMenu()"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+          </ul>
+          <a href="#" class="btn btn-outline" onclick="closeMobileMenu()">Resume</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="project-hero">
+          <div class="container">
+            <h1 class="project-hero-title">Time to Have More Fun</h1>
+            <p class="project-hero-subtitle">Gift recommendation web app</p>
+            
+            <div class="project-meta">
+              <ul class="project-meta-list">
+                <li class="project-meta-item">
+                  <div class="meta-label">Year</div>
+                  <div class="meta-value">2023</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Role</div>
+                  <div class="meta-value">Frontend Developer</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Tech Stack</div>
+                  <div class="meta-value">Next.js, TailwindCSS, Firebase</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Links</div>
+                  <div class="meta-value">
+                    <a href="https://github.com" target="_blank" class="meta-link">GitHub</a> / 
+                    <a href="https://example.com" target="_blank" class="meta-link">View Live</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-content-section">
+          <div class="container">
+            <div class="project-text">
+              <h2 class="project-section-title">Project Overview</h2>
+              <p>
+                "Time to Have More Fun" is a web application designed to solve the age-old problem of finding the perfect gift 
+                for special occasions. Users can browse gift ideas by category, price range, or relationship type, making it 
+                easier to find thoughtful presents for friends, family members, and colleagues.
+              </p>
+              <p>
+                The application features a clean and intuitive user interface, personalized recommendations, and the ability to 
+                save favorite gift ideas for future reference. It aims to reduce the stress of gift shopping and make the process 
+                more enjoyable.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Gift Recommendation App Homepage" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Gift Browsing Interface" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">The Challenge</h2>
+              <p>
+                The main challenge was creating an effective filtering and recommendation system that could account for multiple 
+                variables like occasion, relationship, interests, budget, and more. Additionally, ensuring a fast and responsive 
+                user experience while handling a large database of gift ideas presented technical hurdles.
+              </p>
+              
+              <h2 class="project-section-title">The Solution</h2>
+              <p>
+                I built the application using Next.js for fast performance and server-side rendering capabilities. TailwindCSS 
+                enabled rapid UI development with a consistent design system. For the backend, Firebase provided a flexible and 
+                scalable database solution along with authentication services.
+              </p>
+              <p>
+                The recommendation algorithm uses a combination of explicit user inputs (like budget and relationship) and implicit 
+                data (like browsing patterns) to generate personalized gift suggestions. The UI emphasizes visual browsing with 
+                large imagery and intuitive filtering controls.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Gift Detail Page" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Mobile View of Gift App" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">Key Features</h2>
+              <ul>
+                <li>Multi-faceted filtering by occasion, relationship, price, and more</li>
+                <li>Personalized gift recommendations based on user preferences</li>
+                <li>Save and organize gift ideas for different recipients</li>
+                <li>Responsive design for optimal mobile and desktop experience</li>
+                <li>User accounts with gift idea history and favorites</li>
+                <li>Direct links to purchase gifts from partner retailers</li>
+              </ul>
+              
+              <h2 class="project-section-title">Learnings & Future Improvements</h2>
+              <p>
+                This project improved my skills in creating complex filtering systems and working with large datasets in a 
+                performant way. I also gained experience with Next.js's server-side rendering capabilities and integrating 
+                Firebase services.
+              </p>
+              <p>
+                Future plans include implementing AI-powered gift recommendations, adding a wishlist feature for users to share 
+                with friends and family, and expanding the gift database with more specialized categories.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-cta">
+          <div class="container">
+            <a href="https://example.com" target="_blank" class="btn btn-primary">View Live Project</a>
+            <a href="../projects.html" class="btn btn-outline" style="margin-left: 1rem;">Back to Projects</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <a href="https://github.com/yourusername" target="_blank" class="footer-credit">
+            <div>Designed & Built by Your Name</div>
+            <span class="footer-year">2025</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../scripts.js"></script>
+  </body>
+</html>

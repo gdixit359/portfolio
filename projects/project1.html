@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Project Title | Your Name</title>
+    <meta name="description" content="A web app for visualizing personalized Spotify data." />
+    <meta name="author" content="Your Name" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <header class="navbar">
+        <nav class="nav-container">
+          <a href="../index.html" class="logo">YN.</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <ul class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+              <li><a href="../index.html#experience"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+              <li><a href="../index.html#work"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+              <li><a href="../index.html#contact"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <a href="#" class="btn btn-outline">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger-icon"></span>
+          </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="nav-links mobile">
+            <li><a href="../index.html#about" onclick="closeMobileMenu()"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+            <li><a href="../index.html#experience" onclick="closeMobileMenu()"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+            <li><a href="../index.html#work" onclick="closeMobileMenu()"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+            <li><a href="../index.html#contact" onclick="closeMobileMenu()"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+          </ul>
+          <a href="#" class="btn btn-outline" onclick="closeMobileMenu()">Resume</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="project-hero">
+          <div class="container">
+            <h1 class="project-hero-title">Featured Project Title</h1>
+            <p class="project-hero-subtitle">A web app for visualizing personalized Spotify data</p>
+            
+            <div class="project-meta">
+              <ul class="project-meta-list">
+                <li class="project-meta-item">
+                  <div class="meta-label">Year</div>
+                  <div class="meta-value">2023</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Role</div>
+                  <div class="meta-value">Full-stack Developer</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Tech Stack</div>
+                  <div class="meta-value">React, Node.js, Spotify API</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Links</div>
+                  <div class="meta-value">
+                    <a href="https://github.com" target="_blank" class="meta-link">GitHub</a> / 
+                    <a href="https://example.com" target="_blank" class="meta-link">View Live</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-content-section">
+          <div class="container">
+            <div class="project-text">
+              <h2 class="project-section-title">Project Overview</h2>
+              <p>
+                This web application allows users to visualize their personal Spotify data through an easy-to-use and 
+                interactive dashboard. Users can explore their top artists, top tracks, recently played tracks, and 
+                access detailed audio information about each track.
+              </p>
+              <p>
+                One of the key features is the ability to create and save new playlists of recommended tracks based on 
+                the user's existing playlists and listening habits. The application leverages the Spotify API to fetch 
+                user data and provide personalized recommendations.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Project Screenshot 1" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Project Screenshot 2" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">The Challenge</h2>
+              <p>
+                The primary challenge was to create an intuitive interface that could display complex music data in a way 
+                that's easy to understand. Another challenge was implementing the OAuth flow to securely authenticate users 
+                with their Spotify accounts while maintaining a smooth user experience.
+              </p>
+              
+              <h2 class="project-section-title">The Solution</h2>
+              <p>
+                I built a React-based frontend that creates visually appealing representations of user data, including 
+                charts and interactive elements. For authentication, I implemented a robust OAuth flow using a Node.js 
+                backend service that handles token exchange and refreshes transparent to the user.
+              </p>
+              <p>
+                The application utilizes modern React patterns including hooks and context for state management. 
+                For styling, I chose Styled Components to create a consistent and responsive design across all viewports.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Project Screenshot 3" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Project Screenshot 4" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">Key Features</h2>
+              <ul>
+                <li>Personalized dashboard displaying user's Spotify data</li>
+                <li>Visualization of top artists and tracks over different time periods</li>
+                <li>Analysis of audio features like danceability, energy, and tempo</li>
+                <li>Playlist creation based on user's music preferences</li>
+                <li>Secure OAuth authentication with Spotify</li>
+                <li>Responsive design for all device sizes</li>
+              </ul>
+              
+              <h2 class="project-section-title">Learnings & Future Improvements</h2>
+              <p>
+                This project helped me deepen my understanding of OAuth authentication flows and API integration. 
+                I also improved my skills in data visualization and creating intuitive user interfaces.
+              </p>
+              <p>
+                For future iterations, I plan to implement more advanced music analysis features, add social sharing 
+                capabilities, and create a more sophisticated recommendation algorithm using machine learning techniques.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-cta">
+          <div class="container">
+            <a href="https://example.com" target="_blank" class="btn btn-primary">View Live Project</a>
+            <a href="../projects.html" class="btn btn-outline" style="margin-left: 1rem;">Back to Projects</a>
+          </div>
+        </section>
+
+        <section class="related-projects">
+          <div class="container">
+            <h2 class="related-projects-title">Related Projects</h2>
+            
+            <div class="projects-grid">
+              <!-- Related Project 1 -->
+              <div class="project-card">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="quiz-platform.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="quiz-platform.html">Interactive Quiz Platform</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A web application allowing users to create, share, and participate in interactive quizzes 
+                    with real-time results and personalized feedback.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>React</li>
+                      <li>Redux</li>
+                      <li>Express</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+
+              <!-- Related Project 2 -->
+              <div class="project-card">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="time-to-have-more-fun.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="time-to-have-more-fun.html">Time to Have More Fun</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A single page web app for helping people find the perfect gift. Browse by category, 
+                    price, or relationship to find the perfect gift for special occasions.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>Next.js</li>
+                      <li>TailwindCSS</li>
+                      <li>Firebase</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <a href="https://github.com/yourusername" target="_blank" class="footer-credit">
+            <div>Designed & Built by Your Name</div>
+            <span class="footer-year">2025</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecasting Dashboard | Your Name</title>
+    <meta name="description" content="A comprehensive weather dashboard with interactive visualizations." />
+    <meta name="author" content="Your Name" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <header class="navbar">
+        <nav class="nav-container">
+          <a href="../index.html" class="logo">YN.</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <ul class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+              <li><a href="../index.html#experience"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+              <li><a href="../index.html#work"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+              <li><a href="../index.html#contact"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <a href="#" class="btn btn-outline">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger-icon"></span>
+          </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="nav-links mobile">
+            <li><a href="../index.html#about" onclick="closeMobileMenu()"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+            <li><a href="../index.html#experience" onclick="closeMobileMenu()"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+            <li><a href="../index.html#work" onclick="closeMobileMenu()"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+            <li><a href="../index.html#contact" onclick="closeMobileMenu()"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+          </ul>
+          <a href="#" class="btn btn-outline" onclick="closeMobileMenu()">Resume</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="project-hero">
+          <div class="container">
+            <h1 class="project-hero-title">Weather Forecasting Dashboard</h1>
+            <p class="project-hero-subtitle">Interactive weather visualization application</p>
+            
+            <div class="project-meta">
+              <ul class="project-meta-list">
+                <li class="project-meta-item">
+                  <div class="meta-label">Year</div>
+                  <div class="meta-value">2022</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Role</div>
+                  <div class="meta-value">Frontend Developer & Designer</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Tech Stack</div>
+                  <div class="meta-value">Vue.js, D3.js, Weather API, Netlify</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Links</div>
+                  <div class="meta-value">
+                    <a href="https://github.com" target="_blank" class="meta-link">GitHub</a> / 
+                    <a href="https://example.com" target="_blank" class="meta-link">View Live</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-content-section">
+          <div class="container">
+            <div class="project-text">
+              <h2 class="project-section-title">Project Overview</h2>
+              <p>
+                The Weather Forecasting Dashboard is a comprehensive web application that provides current weather conditions, 
+                forecasts, and historical weather data with interactive visualizations. Users can search for locations worldwide, 
+                view detailed weather information, and explore weather trends through dynamic charts and graphs.
+              </p>
+              <p>
+                The application features a clean and intuitive user interface, real-time weather updates, and customizable 
+                display preferences. It aims to provide weather information in a visually engaging and easy-to-understand format.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Weather Dashboard Main View" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Weather Forecast Graph" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">The Challenge</h2>
+              <p>
+                The main challenge was creating intuitive visualizations that could represent complex weather data in a way 
+                that's easy to understand for users. Additionally, handling multiple data sources, ensuring accurate forecasts, 
+                and optimizing performance with large datasets presented technical hurdles.
+              </p>
+              <p>
+                Another challenge was designing a responsive interface that could display detailed information and rich 
+                visualizations on both desktop and mobile devices without sacrificing usability.
+              </p>
+              
+              <h2 class="project-section-title">The Solution</h2>
+              <p>
+                I built the application using Vue.js for its reactive data handling capabilities, combined with D3.js for 
+                creating custom, interactive visualizations. The weather data is sourced from a reliable weather API that 
+                provides historical, current, and forecast information.
+              </p>
+              <p>
+                For the design, I used a modular component architecture with responsive layouts that adapt to different screen sizes. 
+                Data visualizations were optimized for performance by implementing efficient update patterns and lazy loading of 
+                historical data.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Weather Map View" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Mobile Weather Interface" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">Key Features</h2>
+              <ul>
+                <li>Current weather conditions with detailed measurements</li>
+                <li>7-day forecast with hourly breakdowns</li>
+                <li>Historical weather data visualization</li>
+                <li>Interactive temperature, precipitation, and wind charts</li>
+                <li>Location search with autocomplete</li>
+                <li>Saved locations for quick access</li>
+                <li>Responsive design for all device sizes</li>
+                <li>Dark mode and customizable units (metric/imperial)</li>
+              </ul>
+              
+              <h2 class="project-section-title">Learnings & Future Improvements</h2>
+              <p>
+                This project enhanced my skills in data visualization and working with external APIs. I gained valuable experience 
+                in creating interactive and informative charts using D3.js and designing interfaces that can present complex 
+                information in an accessible way.
+              </p>
+              <p>
+                Future plans include adding radar and satellite imagery, implementing severe weather alerts, adding air quality 
+                information, and creating an interactive map-based interface for exploring weather patterns across regions.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-cta">
+          <div class="container">
+            <a href="https://example.com" target="_blank" class="btn btn-primary">View Live Dashboard</a>
+            <a href="../projects.html" class="btn btn-outline" style="margin-left: 1rem;">Back to Projects</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <a href="https://github.com/yourusername" target="_blank" class="footer-credit">
+            <div>Designed & Built by Your Name</div>
+            <span class="footer-year">2025</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../scripts.js"></script>
+  </body>
+</html>

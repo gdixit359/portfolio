@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Your Name</title>
+    <meta name="description" content="Browse all projects by Your Name - Developer and Designer" />
+    <meta name="author" content="Your Name" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <header class="navbar">
+        <nav class="nav-container">
+          <a href="index.html" class="logo">YN.</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <ul class="nav-links">
+              <li><a href="index.html#about"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+              <li><a href="index.html#experience"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+              <li><a href="index.html#work"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+              <li><a href="index.html#contact"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <a href="#" class="btn btn-outline">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger-icon"></span>
+          </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="nav-links mobile">
+            <li><a href="index.html#about" onclick="closeMobileMenu()"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+            <li><a href="index.html#experience" onclick="closeMobileMenu()"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+            <li><a href="index.html#work" onclick="closeMobileMenu()"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+            <li><a href="index.html#contact" onclick="closeMobileMenu()"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+          </ul>
+          <a href="#" class="btn btn-outline" onclick="closeMobileMenu()">Resume</a>
+        </div>
+      </header>
+
+      <!-- Social Sidebar -->
+      <div class="social-sidebar">
+        <ul class="social-links">
+          <li><a href="https://github.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
+          <li><a href="https://linkedin.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a></li>
+          <li><a href="https://twitter.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></li>
+          <li><a href="https://instagram.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></li>
+        </ul>
+        <div class="email-link">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+        </div>
+      </div>
+
+      <main>
+        <section class="projects-page">
+          <div class="container">
+            <div class="projects-header">
+              <h1 class="projects-title">All Projects</h1>
+              <p class="projects-subtitle">
+                A collection of all my projects, ranging from web applications to design systems and mobile apps.
+              </p>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="project-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="design">Design</button>
+              <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+              <!-- Project 1 -->
+              <div class="project-card" data-category="web">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="projects/project1.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="projects/project1.html">Featured Project Title</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, 
+                    recently played tracks, and detailed audio information about each track.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>React</li>
+                      <li>Node.js</li>
+                      <li>Spotify API</li>
+                      <li>Styled Components</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              
+              <!-- Project 2 -->
+              <div class="project-card" data-category="design">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="projects/project2.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="projects/project2.html">Another Cool Project</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. 
+                    Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>VS Code</li>
+                      <li>Sublime Text</li>
+                      <li>Atom</li>
+                      <li>iTerm2</li>
+                      <li>Hyper</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              
+              <!-- Time to have more fun -->
+              <div class="project-card" data-category="web">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="projects/time-to-have-more-fun.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="projects/time-to-have-more-fun.html">Time to Have More Fun</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A single page web app for helping people find the perfect gift. Browse by category, 
+                    price, or relationship to find the perfect gift for special occasions.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>Next.js</li>
+                      <li>TailwindCSS</li>
+                      <li>Firebase</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              
+              <!-- Headless CMS -->
+              <div class="project-card" data-category="mobile">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="projects/headless-cms.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="projects/headless-cms.html">Building a Headless Mobile App CMS</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A mobile app development education platform delivering bite-sized video tutorials 
+                    and articles for developers looking to build modern applications.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>React Native</li>
+                      <li>Expo</li>
+                      <li>Firebase</li>
+                      <li>StoryBlok</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+              
+              <!-- Quiz platform -->
+              <div class="project-card" data-category="web">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="projects/quiz-platform.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="projects/quiz-platform.html">Interactive Quiz Platform</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A web application allowing users to create, share, and participate in interactive quizzes 
+                    with real-time results and personalized feedback.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>React</li>
+                      <li>Redux</li>
+                      <li>Express</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+
+              <!-- Weather Dashboard -->
+              <div class="project-card" data-category="design">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="projects/weather-dashboard.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="projects/weather-dashboard.html">Weather Forecasting Dashboard</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A comprehensive weather dashboard providing current conditions, forecasts, 
+                    and historical weather data with interactive visualizations.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>Vue.js</li>
+                      <li>D3.js</li>
+                      <li>Weather API</li>
+                      <li>Netlify</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+
+              <!-- Add more projects as needed -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <a href="https://github.com/yourusername" target="_blank" class="footer-credit">
+            <div>Designed & Built by Your Name</div>
+            <span class="footer-year">2025</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

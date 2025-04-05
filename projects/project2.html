@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Another Cool Project | Your Name</title>
+    <meta name="description" content="A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more." />
+    <meta name="author" content="Your Name" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <header class="navbar">
+        <nav class="nav-container">
+          <a href="../index.html" class="logo">YN.</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <ul class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+              <li><a href="../index.html#experience"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+              <li><a href="../index.html#work"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+              <li><a href="../index.html#contact"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <a href="#" class="btn btn-outline">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger-icon"></span>
+          </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="nav-links mobile">
+            <li><a href="../index.html#about" onclick="closeMobileMenu()"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+            <li><a href="../index.html#experience" onclick="closeMobileMenu()"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+            <li><a href="../index.html#work" onclick="closeMobileMenu()"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+            <li><a href="../index.html#contact" onclick="closeMobileMenu()"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+          </ul>
+          <a href="#" class="btn btn-outline" onclick="closeMobileMenu()">Resume</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="project-hero">
+          <div class="container">
+            <h1 class="project-hero-title">Another Cool Project</h1>
+            <p class="project-hero-subtitle">A minimal, dark blue theme for popular code editors</p>
+            
+            <div class="project-meta">
+              <ul class="project-meta-list">
+                <li class="project-meta-item">
+                  <div class="meta-label">Year</div>
+                  <div class="meta-value">2022</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Role</div>
+                  <div class="meta-value">UI Designer & Developer</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Tech Stack</div>
+                  <div class="meta-value">VS Code, Sublime Text, Atom, iTerm2</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Links</div>
+                  <div class="meta-value">
+                    <a href="https://github.com" target="_blank" class="meta-link">GitHub</a> / 
+                    <a href="https://example.com" target="_blank" class="meta-link">Download</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-content-section">
+          <div class="container">
+            <div class="project-text">
+              <h2 class="project-section-title">Project Overview</h2>
+              <p>
+                This is a carefully designed dark theme for code editors and terminal applications, with a focus on 
+                readability and minimal eye strain. The theme features a dark blue background with carefully selected 
+                syntax highlighting colors that provide good contrast without being harsh on the eyes.
+              </p>
+              <p>
+                The theme is available for VS Code, Sublime Text, Atom, iTerm, and more. It has been downloaded 
+                over 50,000 times across all platforms and has received positive reviews for its balanced color 
+                scheme and attention to detail.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Theme Screenshot in VS Code" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Theme Screenshot in Sublime Text" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">The Challenge</h2>
+              <p>
+                Creating a consistent color scheme across multiple platforms was challenging due to the 
+                different color rendering and syntax highlighting capabilities of each editor. Additionally, 
+                ensuring accessibility and readability for different programming languages required extensive 
+                testing and refinement.
+              </p>
+              
+              <h2 class="project-section-title">The Solution</h2>
+              <p>
+                I developed a core color palette that could be adapted to each platform's specific requirements. 
+                For each editor, I created custom configurations that maintained the visual identity of the theme 
+                while working within the constraints of the platform.
+              </p>
+              <p>
+                I tested the theme with popular programming languages like JavaScript, Python, Ruby, and C++, 
+                making adjustments to ensure optimal readability in all contexts. For distribution, I created 
+                individual packages for each platform's package manager.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Theme Screenshot in iTerm" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Theme Screenshot in Atom" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">Key Features</h2>
+              <ul>
+                <li>Dark blue background optimized for reduced eye strain</li>
+                <li>Carefully selected syntax highlighting colors for improved readability</li>
+                <li>Consistent experience across multiple platforms and editors</li>
+                <li>Support for popular programming languages and frameworks</li>
+                <li>Regular updates based on user feedback</li>
+                <li>Customizable options for personal preferences</li>
+              </ul>
+              
+              <h2 class="project-section-title">Learnings & Future Improvements</h2>
+              <p>
+                This project deepened my understanding of color theory and accessibility considerations in UI design. 
+                I also gained experience in packaging and distributing software for different platforms.
+              </p>
+              <p>
+                Future plans include expanding to additional platforms, creating light versions of the theme, 
+                and implementing specialized highlighting for more programming languages and frameworks.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-cta">
+          <div class="container">
+            <a href="https://example.com" target="_blank" class="btn btn-primary">Download Theme</a>
+            <a href="../projects.html" class="btn btn-outline" style="margin-left: 1rem;">Back to Projects</a>
+          </div>
+        </section>
+
+        <section class="related-projects">
+          <div class="container">
+            <h2 class="related-projects-title">Related Projects</h2>
+            
+            <div class="projects-grid">
+              <!-- Related Project 1 -->
+              <div class="project-card">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="project1.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="project1.html">Featured Project Title</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, 
+                    recently played tracks, and detailed audio information about each track.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>React</li>
+                      <li>Node.js</li>
+                      <li>Spotify API</li>
+                      <li>Styled Components</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+
+              <!-- Related Project 2 -->
+              <div class="project-card">
+                <div class="card-inner">
+                  <header class="card-header">
+                    <div class="folder-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-links">
+                      <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a href="weather-dashboard.html" target="_blank" aria-label="External Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </header>
+                  
+                  <h3 class="card-title">
+                    <a href="weather-dashboard.html">Weather Forecasting Dashboard</a>
+                  </h3>
+                  
+                  <p class="card-description">
+                    A comprehensive weather dashboard providing current conditions, forecasts, 
+                    and historical weather data with interactive visualizations.
+                  </p>
+                  
+                  <footer class="card-footer">
+                    <ul class="card-tech-list">
+                      <li>Vue.js</li>
+                      <li>D3.js</li>
+                      <li>Weather API</li>
+                      <li>Netlify</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <a href="https://github.com/yourusername" target="_blank" class="footer-credit">
+            <div>Designed & Built by Your Name</div>
+            <span class="footer-year">2025</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz Platform | Your Name</title>
+    <meta name="description" content="A web application for creating, sharing, and participating in interactive quizzes." />
+    <meta name="author" content="Your Name" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Navigation -->
+      <header class="navbar">
+        <nav class="nav-container">
+          <a href="../index.html" class="logo">YN.</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <ul class="nav-links">
+              <li><a href="../index.html#about"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+              <li><a href="../index.html#experience"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+              <li><a href="../index.html#work"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+              <li><a href="../index.html#contact"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <a href="#" class="btn btn-outline">Resume</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger-icon"></span>
+          </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <ul class="nav-links mobile">
+            <li><a href="../index.html#about" onclick="closeMobileMenu()"><span class="nav-number">01.</span><span class="nav-text">About</span></a></li>
+            <li><a href="../index.html#experience" onclick="closeMobileMenu()"><span class="nav-number">02.</span><span class="nav-text">Experience</span></a></li>
+            <li><a href="../index.html#work" onclick="closeMobileMenu()"><span class="nav-number">03.</span><span class="nav-text">Work</span></a></li>
+            <li><a href="../index.html#contact" onclick="closeMobileMenu()"><span class="nav-number">04.</span><span class="nav-text">Contact</span></a></li>
+          </ul>
+          <a href="#" class="btn btn-outline" onclick="closeMobileMenu()">Resume</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="project-hero">
+          <div class="container">
+            <h1 class="project-hero-title">Interactive Quiz Platform</h1>
+            <p class="project-hero-subtitle">Create and share interactive quizzes with real-time results</p>
+            
+            <div class="project-meta">
+              <ul class="project-meta-list">
+                <li class="project-meta-item">
+                  <div class="meta-label">Year</div>
+                  <div class="meta-value">2021</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Role</div>
+                  <div class="meta-value">Full-stack Developer</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Tech Stack</div>
+                  <div class="meta-value">React, Redux, Express, MongoDB</div>
+                </li>
+                <li class="project-meta-item">
+                  <div class="meta-label">Links</div>
+                  <div class="meta-value">
+                    <a href="https://github.com" target="_blank" class="meta-link">GitHub</a> / 
+                    <a href="https://example.com" target="_blank" class="meta-link">View Live</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-content-section">
+          <div class="container">
+            <div class="project-text">
+              <h2 class="project-section-title">Project Overview</h2>
+              <p>
+                The Interactive Quiz Platform is a web application that enables users to create, share, and participate 
+                in interactive quizzes. The platform supports various question types, real-time results, and personalized 
+                feedback, making it ideal for educational contexts, team building activities, or just for fun.
+              </p>
+              <p>
+                Users can create quizzes with multiple-choice, true/false, and short answer questions, add images and 
+                explanations, and share them publicly or with selected participants. Quiz takers receive immediate feedback 
+                and detailed results upon completion.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Quiz Creator Interface" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Quiz Taking Interface" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">The Challenge</h2>
+              <p>
+                The main challenge was building a flexible question editor that could support different question types 
+                while maintaining a simple user interface. Additionally, implementing real-time functionality for live 
+                quizzes and ensuring data consistency across multiple concurrent users required careful planning.
+              </p>
+              <p>
+                Another significant challenge was designing a scoring system that could handle various question types 
+                and provide meaningful analytics to quiz creators.
+              </p>
+              
+              <h2 class="project-section-title">The Solution</h2>
+              <p>
+                I built a full-stack application using React and Redux for the frontend, with Express and MongoDB for 
+                the backend. The application uses a component-based architecture that allows for reusable question types 
+                and flexible layouts.
+              </p>
+              <p>
+                For real-time functionality, I implemented Socket.IO to provide live updates during quiz sessions. The 
+                scoring system uses a flexible algorithm that adapts to different question types and weights, providing 
+                detailed analytics and insights for quiz creators.
+              </p>
+            </div>
+
+            <div class="project-gallery">
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Results Dashboard" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Analytics Interface" />
+              </div>
+            </div>
+
+            <div class="project-text">
+              <h2 class="project-section-title">Key Features</h2>
+              <ul>
+                <li>Intuitive quiz creation interface with multiple question types</li>
+                <li>Live quiz sessions with real-time participant tracking</li>
+                <li>Detailed results and analytics for quiz creators</li>
+                <li>Personalized feedback for quiz participants</li>
+                <li>Public and private sharing options</li>
+                <li>Mobile-responsive design for quizzes on any device</li>
+                <li>User authentication and quiz history</li>
+              </ul>
+              
+              <h2 class="project-section-title">Learnings & Future Improvements</h2>
+              <p>
+                This project enhanced my skills in building real-time applications and managing complex state in Redux. 
+                I also gained experience in designing flexible data models that can accommodate various content types 
+                and user interactions.
+              </p>
+              <p>
+                Future improvements include adding more interactive question types (like drag-and-drop and hotspot questions), 
+                implementing a team competition mode, and developing AI-powered question generation to help quiz creators.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-cta">
+          <div class="container">
+            <a href="https://example.com" target="_blank" class="btn btn-primary">Try It Out</a>
+            <a href="../projects.html" class="btn btn-outline" style="margin-left: 1rem;">Back to Projects</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <a href="https://github.com/yourusername" target="_blank" class="footer-credit">
+            <div>Designed & Built by Your Name</div>
+            <span class="footer-year">2025</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../scripts.js"></script>
+  </body>
+</html>
